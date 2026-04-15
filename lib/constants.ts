@@ -48,3 +48,7 @@ export const TOOL_NAME = "FAST Diagnostic Tool";
 export const BRAND = "Cambridge Learning Group";
 export const WHATSAPP_NUMBER = "6582234772"; // +65 8223 4772
 export const CONSULT_DURATION_MIN = 30;
+
+// Email
+export const EMAIL_FROM = "FAST Diagnostic <fast@fast.topstudentsecrets.com>";
+export const EMAIL_REPLY_TO = "clgsg2014@gmail.com";
