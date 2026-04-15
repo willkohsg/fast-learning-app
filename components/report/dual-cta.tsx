@@ -110,7 +110,7 @@ export function DualCTA({
             </div>
             {error && <p className="text-sm text-destructive">{error}</p>}
             <p className="text-xs text-muted-foreground">
-              We'll send one email with your full report and a booking link. No spam.
+              We'll send one email with your full report and a consultation booking link. No spam.
             </p>
           </div>
         )}
