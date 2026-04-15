@@ -116,8 +116,18 @@ export function DualCTA({
         )}
 
         {sent && (
-          <div className="rounded-xl border border-green-200 bg-green-50 p-4 text-sm text-green-800">
-            ✓ Sent. Check your inbox in a minute or two.
+          <div className="rounded-xl border border-green-200 bg-green-50 p-4 text-sm text-green-800 space-y-2">
+            <p>✓ Sent to <strong>{email}</strong>. Check your inbox in a minute or two.</p>
+            <button
+              type="button"
+              onClick={() => {
+                setSent(false);
+                setEmail("");
+              }}
+              className="text-xs underline text-green-900"
+            >
+              Send to a different email
+            </button>
           </div>
         )}
       </div>
