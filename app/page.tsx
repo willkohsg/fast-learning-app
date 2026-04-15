@@ -1,6 +1,15 @@
+"use client";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { recallSession, forgetSession } from "@/lib/session-storage";
 
 export default function LandingPage() {
+  const [resumeId, setResumeId] = useState<string | null>(null);
+
+  useEffect(() => {
+    setResumeId(recallSession());
+  }, []);
+
   return (
     <main className="min-h-screen px-6 py-12 max-w-2xl mx-auto">
       <div className="space-y-8">
@@ -21,11 +30,37 @@ export default function LandingPage() {
           </p>
         </div>
 
+        {resumeId && (
+          <div className="p-4 rounded-lg border-2 border-amber-300 bg-amber-50">
+            <p className="text-sm font-semibold text-amber-900">
+              Welcome back — you have a diagnostic in progress.
+            </p>
+            <div className="flex gap-3 mt-3">
+              <Link
+                href={`/diagnostic/${resumeId}/audience`}
+                className="inline-flex items-center justify-center rounded-md bg-amber-600 text-white px-4 py-2 text-sm font-medium hover:bg-amber-700 transition"
+              >
+                Resume where I left off
+              </Link>
+              <button
+                type="button"
+                onClick={() => {
+                  forgetSession();
+                  setResumeId(null);
+                }}
+                className="text-sm text-amber-900 underline"
+              >
+                Start over
+              </button>
+            </div>
+          </div>
+        )}
+
         <Link
           href="/diagnostic/new"
           className="inline-flex items-center justify-center rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-sm hover:opacity-90 transition"
         >
-          Start the diagnostic →
+          {resumeId ? "Start a fresh diagnostic →" : "Start the diagnostic →"}
         </Link>
 
         <div className="pt-8 border-t space-y-4 text-sm text-muted-foreground">
