@@ -14,6 +14,18 @@ import { buildWhatsAppLink } from "../lib/whatsapp";
 
 const ORDER: Pillar[] = ["F", "A", "S", "T"];
 
+// Per-pillar inline color palette for email (matches on-screen hero card).
+// Email clients don't support Tailwind, so we hand-pick light bg / border / dark text.
+const PILLAR_EMAIL_PALETTE: Record<
+  Pillar,
+  { bg: string; border: string; text: string }
+> = {
+  F: { bg: "#eff6ff", border: "#bfdbfe", text: "#1d4ed8" },
+  A: { bg: "#faf5ff", border: "#e9d5ff", text: "#6d28d9" },
+  S: { bg: "#ecfdf5", border: "#a7f3d0", text: "#047857" },
+  T: { bg: "#fff7ed", border: "#fed7aa", text: "#c2410c" },
+};
+
 /**
  * Sends the diagnostic report by email.
  *
@@ -91,22 +103,48 @@ export const sendReportEmail = action({
           </ul>`
         : "";
 
-    const tiedSuffix =
-      verdictPillars.length > 1
-        ? ` — tied with ${verdictPillars.slice(1).join(", ")}`
-        : "";
-
     const topicsLine =
       weakestTopics.length > 0
         ? `<p>Clustering was strongest in <strong>${escapeHtml(weakestTopics.join(", "))}</strong>.</p>`
         : "";
 
+    const palette = PILLAR_EMAIL_PALETTE[primary];
+    const tied = verdictPillars.length > 1;
+    const heroBadge = tied ? verdictPillars.join("/") : primary;
+    const greetingName = session.studentName ? `${session.studentName}, ` : "";
+    const heroHeadline = tied
+      ? `${escapeHtml(greetingName)}your weakest pillars are <span style="color: ${palette.text};">${verdictPillars.join(" &amp; ")}</span> &mdash; tied at ~${pillarScores[primary]}% each.`
+      : `${escapeHtml(greetingName)}your weakest pillar is <span style="color: ${palette.text};">${escapeHtml(meta.name)}</span> &mdash; ${pillarScores[primary]}% of your errors.`;
+
     const html = `
-      <div style="font-family: -apple-system, system-ui, Helvetica, Arial, sans-serif; max-width: 560px; margin: 0 auto; color: #1f2937; line-height: 1.55; font-size: 15px;">
-        <p style="font-size: 12px; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">${TOOL_NAME}</p>
-        <h1 style="font-size: 22px; margin: 0 0 16px;">Your weakest pillar: ${meta.name} (${meta.letter})${tiedSuffix}</h1>
-        <p>${greeting}</p>
-        <p>Of your <strong>${errors.length}</strong> logged errors, <strong>${pillarScores[primary]}%</strong> traced back to the <strong>${meta.name}</strong> pillar.</p>
+      <div style="font-family: -apple-system, system-ui, Helvetica, Arial, sans-serif; max-width: 560px; margin: 0 auto; color: #1f2937; line-height: 1.55; font-size: 15px; padding: 12px;">
+
+        <!-- Hero verdict card -->
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background: ${palette.bg}; border: 2px solid ${palette.border}; border-radius: 16px; margin-bottom: 24px;">
+          <tr>
+            <td style="padding: 24px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="vertical-align: top; padding-right: 16px;">
+                    <div style="width: 56px; height: 56px; background: #ffffff; border-radius: 14px; text-align: center; line-height: 56px; font-size: 28px; font-weight: 900; color: ${palette.text}; box-shadow: 0 1px 2px rgba(0,0,0,0.04);">
+                      ${heroBadge}
+                    </div>
+                  </td>
+                  <td style="vertical-align: top;">
+                    <p style="margin: 0 0 6px; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: ${palette.text};">Your weakest FAST pillar</p>
+                    <h1 style="margin: 0; font-size: 22px; line-height: 1.25; color: #111827; font-weight: 700;">${heroHeadline}</h1>
+                  </td>
+                </tr>
+              </table>
+              <p style="margin: 16px 0 0; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.7); font-size: 14px; color: #374151;">
+                ${escapeHtml(meta.subline)}
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        <p style="margin: 0 0 12px;">${greeting}</p>
+        <p style="margin: 0 0 8px;">Of your <strong>${errors.length}</strong> logged errors, <strong>${pillarScores[primary]}%</strong> traced back to the <strong>${escapeHtml(meta.name)}</strong> pillar.</p>
         ${topicsLine}
 
         <h2 style="font-size: 16px; margin: 24px 0 8px;">Top recurring patterns</h2>
