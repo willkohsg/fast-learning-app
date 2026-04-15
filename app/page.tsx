@@ -77,9 +77,12 @@ export default function LandingPage() {
               <p>Every insight cites your own errors.</p>
             </div>
           </div>
-          <p className="pt-4">
-            By Cambridge Learning Group — The FAST Learning System: Going From Knowing To Scoring
-          </p>
+          <div className="pt-4 space-y-1">
+            <p className="font-semibold text-foreground">
+              The FAST Learning System: Going From Knowing To Scoring
+            </p>
+            <p>Cambridge Learning Group</p>
+          </div>
         </div>
       </div>
     </main>
