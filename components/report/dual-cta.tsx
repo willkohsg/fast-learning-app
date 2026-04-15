@@ -12,7 +12,7 @@ import { CONSULT_DURATION_MIN } from "@/lib/constants";
 
 /**
  * Block 5: stacked dual CTA. Primary = WhatsApp deep link (pre-filled msg).
- * Secondary = email the PDF. Email form expands inline when tapped.
+ * Secondary = email the full report. Email form expands inline when tapped.
  */
 export function DualCTA({
   sessionId,
@@ -88,13 +88,13 @@ export function DualCTA({
             onClick={() => setShowEmailForm(true)}
             className="w-full text-sm text-muted-foreground hover:text-foreground underline-offset-4 hover:underline transition py-2"
           >
-            Or email me the PDF report
+            Or send a full report via email
           </button>
         )}
 
         {showEmailForm && !sent && (
           <div className="rounded-xl border p-4 space-y-3 bg-card">
-            <Label htmlFor="email-pdf">Email me the PDF</Label>
+            <Label htmlFor="email-pdf">Send a full report via email</Label>
             <div className="flex flex-col sm:flex-row gap-2">
               <Input
                 id="email-pdf"
@@ -110,7 +110,7 @@ export function DualCTA({
             </div>
             {error && <p className="text-sm text-destructive">{error}</p>}
             <p className="text-xs text-muted-foreground">
-              We'll send one email with your PDF and a booking link. No spam.
+              We'll send one email with your full report and a booking link. No spam.
             </p>
           </div>
         )}
