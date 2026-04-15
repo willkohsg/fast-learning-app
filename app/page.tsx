@@ -78,7 +78,7 @@ export default function LandingPage() {
             </div>
           </div>
           <p className="pt-4">
-            By Cambridge Learning Group — maths tuition, Singapore.
+            By Cambridge Learning Group — The FAST Learning System: Going From Knowing To Scoring
           </p>
         </div>
       </div>
