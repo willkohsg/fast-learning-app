@@ -18,15 +18,14 @@ export default function LandingPage() {
             FAST DIAGNOSTIC TOOL
           </p>
           <h1 className="text-4xl font-bold leading-tight sm:text-5xl">
-            Find the <span className="text-primary">one pillar</span> costing
-            your child the most marks.
+            Find the <span className="text-primary">ONE THING</span> costing
+            your child the most marks in exams.
           </h1>
           <p className="text-lg text-muted-foreground pt-2">
             A free, 15-minute error-log diagnostic for Sec 1–4 maths students in
             Singapore. Upload a recent paper, log the mistakes, and get a
-            personalised report pinpointing the <strong>F</strong>,{" "}
-            <strong>A</strong>, <strong>S</strong>, or <strong>T</strong>{" "}
-            pillar you need to strengthen.
+            personalised report pinpointing the area your child need to
+            strengthen.
           </p>
         </div>
 
