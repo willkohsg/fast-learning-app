@@ -9,6 +9,7 @@ import { PatternCards } from "@/components/report/pattern-cards";
 import { PillarsAccordion } from "@/components/report/pillars-accordion";
 import { BridgeParagraph } from "@/components/report/bridge-paragraph";
 import { DualCTA } from "@/components/report/dual-cta";
+import { SourceData } from "@/components/report/source-data";
 import type { Pillar } from "@/lib/pillars";
 
 export default function ReportPage({
@@ -88,6 +89,7 @@ export default function ReportPage({
         verdictPillars={verdictPillars}
       />
       <BridgeParagraph verdictPillars={verdictPillars} />
+      <SourceData sessionId={id} errors={errors} />
       <DualCTA
         sessionId={id}
         studentName={session.studentName}
