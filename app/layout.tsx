@@ -5,7 +5,7 @@ import { Providers } from "./providers";
 export const metadata: Metadata = {
   title: "FAST Diagnostic Tool — Cambridge Learning Group",
   description:
-    "A free 9-minute error-log diagnostic for Sec 1–4 maths students in Singapore. Discover your weakest FAST pillar and what to do about it.",
+    "A free 9-minute diagnostic for Sec 1–4 maths students in Singapore. Discover your weakest FAST pillar and what to do about it.",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000",
   ),
