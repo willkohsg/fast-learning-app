@@ -162,7 +162,7 @@ export const sendReportEmail = action({
         </div>
 
         <p style="font-size: 12px; color: #6b7280; margin-top: 32px; border-top: 1px solid #e5e7eb; padding-top: 12px;">
-          This report is a starting point, not a diagnosis. Reply to this email if you have any questions — it goes straight to William at Cambridge Learning Group.
+          This report is a starting point, not a diagnosis. Reply to this email if you have any questions — it goes straight to Mr William Koh at Cambridge Learning Group, founder of the FAST Learning System, the high-performance exam preparation framework this diagnostic tool is built upon.
         </p>
       </div>
     `;
