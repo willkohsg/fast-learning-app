@@ -133,7 +133,7 @@ p("If the degree of accuracy is not specified in the question and if the answer 
 p("For π, use either your calculator value or 3.142.")
 gap(1)
 
-marks_list = [3, 4, 4, 4, 4, 5, 5, 7, 7, 7, 8, 10, 10, 12]
+marks_list = [3, 4, 4, 4, 5, 5, 6, 7, 7, 7, 8, 10, 8, 12]
 tbl = doc.add_table(rows=9, cols=6)
 tbl.style = 'Table Grid'
 tbl.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -239,23 +239,19 @@ part("(ii)", r"Hence find the range of values of the constant $k$ for which the 
               r"$-2x^2 - 12x + 5 = k$ does not have two distinct roots.", 2)
 pagebreak()
 
-q("5", r"The diagram below shows a plaque designed in the shape of an equilateral triangle "
-        r"sitting on top of a rectangle. The rectangle has height $p$ m and width $q$ m, "
-        r"and the equilateral triangle has side $q$ m.", None)
-gap(1)
-img("plaque.png", 5.6)
-gap(1)
-part("(i)", r"Given that the perimeter of the plaque is 10 m, express $p$ in terms of $q$.", 2)
-gap(7)
-part("(ii)", r"Show that the area of the plaque, $A$ m², is given by", 2)
-eq(r'A = 5q - \frac{3}{2}q^2 + \frac{\sqrt{3}}{4}q^2')
-pagebreak()
-
-q("6", r"Show that the line $y = x - 1$ intersects the curve $y = nx^2 + 3x - n$ "
+q("5", r"Show that the line $y = x - 1$ intersects the curve $y = nx^2 + 3x - n$ "
         r"at two distinct points for all real values of $n$.", 5)
 pagebreak()
 
-q("7", r"Solve the equation $\log_2(x - 2) + 2\log_4(x - 3) = \frac{1}{2}\log_3 9$.", 5)
+q("6", r"Solve the equation $\log_2(x - 2) + 2\log_4(x - 3) = \frac{1}{2}\log_3 9$.", 5)
+pagebreak()
+
+PF = r'\frac{3x^2 + 3x + 10}{(x + 1)(x^2 + 4)}'
+q("7", "", None)
+part("(i)", r"Explain why $" + PF + r"$ cannot be expressed in the form", 2)
+eq(r'\frac{A}{x + 1} + \frac{B}{x^2 + 4}\quad\text{, where } A \text{ and } B \text{ are constants.}')
+gap(9)
+part("(ii)", r"Express $" + PF + r"$ in partial fractions.", 4)
 pagebreak()
 
 q("8", r"The coordinates of the points $A$, $B$ and $C$ are $(2, 3)$, $(-1, -1)$ and "
@@ -340,9 +336,6 @@ gap(1)
 img("graphpaper.png", 14.5)
 pagebreak()
 part("(b)", r"Use your graph to estimate the value of $A$ and of $k$.", 4)
-gap(8)
-part("(c)", r"Use your graph to estimate the distance from the buoy when the signal loss is "
-             r"30 dB. Leave your answer to the nearest metre.", 2)
 pagebreak()
 
 IDENT = r'\frac{\cos\theta}{1 - \sin\theta} - \frac{1 - \sin\theta}{\cos\theta}'
