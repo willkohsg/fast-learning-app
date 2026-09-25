@@ -48,6 +48,8 @@ TOT = sum(r[3] for r in RESULTS)
 
 doc = Document()
 for s in doc.sections:
+    s.page_width = Cm(21.0)      # A4 - python-docx defaults to US Letter
+    s.page_height = Cm(29.7)
     s.top_margin = Cm(1.7); s.bottom_margin = Cm(1.7)
     s.left_margin = Cm(1.9); s.right_margin = Cm(1.9)
 st = doc.styles['Normal']

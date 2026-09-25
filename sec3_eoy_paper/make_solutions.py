@@ -26,6 +26,8 @@ RIGHT_TAB = Cm(16.0)
 
 doc = Document()
 for s in doc.sections:
+    s.page_width = Cm(21.0)      # A4 - python-docx defaults to US Letter
+    s.page_height = Cm(29.7)
     s.top_margin = Cm(1.8); s.bottom_margin = Cm(1.8)
     s.left_margin = Cm(2.0); s.right_margin = Cm(2.0)
 
