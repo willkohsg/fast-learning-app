@@ -54,3 +54,7 @@ __pycache__/
 ms_job/build/__pycache__/
 fuhua_parallel/build/__pycache__/
 fuhua_parallel/__pycache__/
+
+# Marked student scripts and per-student reports stay local (personal data).
+Riziki_*
+riziki_report/
