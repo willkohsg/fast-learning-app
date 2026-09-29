@@ -1,0 +1,119 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>The Fuhua Examiner's Map</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm 14mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Liberation Serif", Georgia, serif; font-size: 10.2pt;
+         line-height: 1.42; color: #14181d; margin: 0; }
+  header { display: flex; align-items: center; gap: 12px;
+           border-bottom: 2.2pt solid #1F4E9C; padding-bottom: 7px; margin-bottom: 14px; }
+  header img { height: 34px; }
+  .ttl { flex: 1; }
+  h1 { font-family: "Liberation Sans", Arial, sans-serif; font-size: 16pt;
+       margin: 0; color: #1F4E9C; letter-spacing: -.2px; }
+  .sub { font-family: "Liberation Sans", Arial, sans-serif; font-size: 8.4pt;
+         color: #5a636e; margin-top: 2px; text-transform: uppercase; letter-spacing: .6px; }
+  h2 { font-family: "Liberation Sans", Arial, sans-serif; font-size: 11.4pt;
+       color: #1F4E9C; margin: 16px 0 6px; padding-bottom: 3px;
+       border-bottom: .7pt solid #c9d4e6; page-break-after: avoid; }
+  h2:first-of-type { margin-top: 4px; }
+  p { margin: 5px 0; }
+  .lead { background: #f3f6fb; border-left: 3pt solid #1F4E9C;
+          padding: 7px 10px; margin: 0 0 4px; }
+  table { width: 100%; border-collapse: collapse; margin: 6px 0 4px;
+          font-size: 9.6pt; page-break-inside: avoid; }
+  th { background: #1F4E9C; color: #fff; text-align: left; padding: 5px 7px;
+       font-family: "Liberation Sans", Arial, sans-serif; font-size: 8.8pt;
+       text-transform: uppercase; letter-spacing: .4px; }
+  td { padding: 5px 7px; border-bottom: .5pt solid #dde3ec; vertical-align: top; }
+  tr:nth-child(even) td { background: #f7f9fc; }
+  td:first-child { font-weight: bold; white-space: nowrap; }
+  .dev { margin: 7px 0 0; padding-left: 0; list-style: none; }
+  .dev > li { margin-bottom: 7px; page-break-inside: avoid; }
+  .dev .n { font-family: "Liberation Sans", Arial, sans-serif; font-weight: bold;
+            color: #C00000; }
+  .dev ul { margin: 2px 0 0 16px; padding: 0; }
+  .dev ul li { margin: 1px 0; font-size: 9.6pt; color: #333b45; }
+  em { color: #1F4E9C; font-style: italic; }
+  code, .m { font-family: "Liberation Mono", "Courier New", monospace;
+             font-size: 9.2pt; background: #eef2f8; padding: 0 2px; border-radius: 2px; }
+  .yr { color: #7a8390; font-size: 9pt; }
+  .frame { border: .7pt solid #c9d4e6; border-radius: 3px; padding: 8px 10px;
+           background: #fcfdff; page-break-inside: avoid; }
+  .frame b { color: #1F4E9C; }
+  footer { margin-top: 16px; border-top: .7pt solid #c9d4e6; padding-top: 5px;
+           font-family: "Liberation Sans", Arial, sans-serif;
+           font-size: 7.8pt; color: #7a8390; display: flex; justify-content: space-between; }
+</style>
+
+<header>
+  <img src="logo.png" alt="">
+  <div class="ttl">
+    <h1>The Fuhua Examiner's Map</h1>
+    <div class="sub">Additional Mathematics 4049 &middot; Sec 3 End-of-Year &middot; Construction grammar</div>
+  </div>
+</header>
+
+<p class="lead">Drawn from Fuhua Secondary's <b>2024 (3NA)</b> and <b>2025 (3E)</b> End-of-Year papers.
+This is the <b>construction grammar</b> &mdash; the habits that repeat regardless of which
+topic is being tested. Learn the grammar and the paper stops being a surprise.</p>
+
+<h2>1 &nbsp;Structural signature</h2>
+<table>
+  <tr><th style="width:21%">Element</th><th>Fuhua's habit</th></tr>
+  <tr><td>Opener</td><td>A 2&ndash;4 mark algebra warm-up. Quadratic inequality <span class="yr">(2025 Q1a)</span>,
+      <span class="m">4x&sup2; &lt; x</span> <span class="yr">(2024 Q3)</span>, principal value
+      <span class="yr">(2024 Q1a)</span>. Deliberately low-stakes.</td></tr>
+  <tr><td>Discriminant</td><td>Appears <b>twice</b>, in two disguises: once as a <em>proof</em>
+      ("show &hellip; for all real <span class="m">k</span>"), once as a <em>range</em> or
+      <em>count of intersections</em>. <span class="yr">2025 Q1b + Q2; 2024 Q6 + Q8.</span></td></tr>
+  <tr><td>Spine</td><td>One 10&ndash;12 mark coordinate-geometry question, headed
+      <b>"Solutions by accurate drawing will not be accepted"</b>.</td></tr>
+  <tr><td>Closer</td><td>The trigonometric graph &mdash; amplitude, period, sketch.
+      Nearly identical two years running.</td></tr>
+  <tr><td>Ladder</td><td>1&ndash;2 mark openers &rarr; 4&ndash;6 mark middle &rarr;
+      one 10&ndash;12 mark spine.</td></tr>
+</table>
+
+<h2>2 &nbsp;The five recurring construction devices</h2>
+<ol class="dev">
+  <li><span class="n">1 &nbsp;A prose-reasoning mark in every paper (~2 marks).</span>
+      Not computation &mdash; explanation.
+      <ul>
+        <li>2025 Q5(i): <em>"David claims &hellip; Explain why his claim is wrong."</em></li>
+        <li>2024 Q2(ii): <em>"Explain why y = &minus;7 is the only real root."</em></li>
+        <li>2024 Q15(b): <em>"Explain why y = 1 is not a tangent."</em></li>
+      </ul></li>
+  <li><span class="n">2 &nbsp;A "for all values of" proof.</span>
+      They want the discriminant shown <em>positive</em> or <em>negative</em>, with
+      justification &mdash; not merely non-zero. <span class="yr">2025 Q1(b).</span></li>
+  <li><span class="n">3 &nbsp;A context-ceiling answer.</span>
+      <em>"the number of complete hours"</em> <span class="yr">(2025 Q4d)</span>.
+      The decimal is not the answer; the next whole unit is.</li>
+  <li><span class="n">4 &nbsp;Deliberately ugly exact values.</span>
+      <span class="m">B(28/9, 4/3)</span> in 2025 Q9(iii). The method is standard;
+      the arithmetic is the filter.</li>
+  <li><span class="n">5 &nbsp;Answer-form constraints, always stated.</span>
+      <em>"in the form a + b&radic;3 where a and b are integers"</em> /
+      <em>"rational numbers"</em> / <em>"correct to 2 decimal places"</em> /
+      <em>"in radians as a multiple of &pi;"</em> / <em>"exact form"</em>.
+      A correct number in the wrong form loses the A mark.</li>
+</ol>
+
+<h2>3 &nbsp;Topic frame (Express)</h2>
+<div class="frame">
+  <b>Quadratics &amp; discriminant</b> &middot; <b>surds</b> (always <em>both</em> rationalising
+  <em>and</em> a surd equation) &middot; <b>polynomials</b> (remainder / factor &rarr; solve cubic)
+  &middot; <b>partial fractions</b> (<em>always</em> with an irreducible quadratic factor)
+  &middot; <b>indices &amp; logarithms</b> (including change of base)
+  &middot; <b>exponential growth model</b> &middot; <b>binomial theorem</b>
+  &middot; <b>coordinate geometry</b> &middot; <b>circles</b> &middot; <b>linear law</b>
+  &middot; <b>trigonometric ratios</b> with negative / complementary angles
+  &middot; <b>trigonometric graphs</b>.
+</div>
+
+<footer>
+  <span>Cambridge Learning Group &middot; A-Math 4049 &middot; Fuhua Examiner's Map</span>
+  <span>Part 1 of 4 &mdash; 2026 EOY preparation</span>
+</footer>
