@@ -52,3 +52,5 @@ yarn-error.log*
 __pycache__/
 *.pyc
 ms_job/build/__pycache__/
+fuhua_parallel/build/__pycache__/
+fuhua_parallel/__pycache__/
