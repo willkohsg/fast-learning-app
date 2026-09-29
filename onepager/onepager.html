@@ -1,0 +1,256 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Sec 3 A-Math — Night Before</title>
+<style>
+  @page { size: A4; margin: 8mm 8mm 6mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Liberation Serif", Georgia, serif; font-size: 7.5pt;
+         line-height: 1.26; color: #14181d; margin: 0; }
+  header { display: flex; align-items: center; gap: 8px;
+           border-bottom: 2pt solid #1F4E9C; padding-bottom: 4px; margin-bottom: 5px; }
+  header img { height: 22px; }
+  h1 { font-family: "Liberation Sans", Arial, sans-serif; font-size: 12.5pt;
+       margin: 0; color: #1F4E9C; letter-spacing: -.2px; }
+  .sub { font-family: "Liberation Sans", Arial, sans-serif; font-size: 6.4pt;
+         color: #5a636e; margin-top: 1px; text-transform: uppercase; letter-spacing: .5px; }
+  .cols { column-count: 3; column-gap: 7px; column-fill: auto; height: 268mm; }
+  section { break-inside: avoid; margin-bottom: 5px; }
+  h2 { font-family: "Liberation Sans", Arial, sans-serif; font-size: 7.4pt;
+       color: #fff; background: #1F4E9C; margin: 0 0 3px;
+       padding: 2px 5px; border-radius: 2px;
+       text-transform: uppercase; letter-spacing: .4px; }
+  h2.warn { background: #C00000; }
+  h2.go { background: #1d6b3f; }
+  p { margin: 2px 0; }
+  .f { background: #f3f6fb; border-left: 2pt solid #1F4E9C;
+       padding: 2px 5px; margin: 2px 0; }
+  .k { font-weight: bold; color: #1F4E9C; }
+  ul { margin: 2px 0 0; padding-left: 11px; }
+  li { margin: 1.6px 0; }
+  li.t::marker { color: #C00000; }
+  b.r { color: #C00000; }
+  b.g { color: #1d6b3f; }
+  i { color: #4a5563; }
+  table { width: 100%; border-collapse: collapse; margin: 2px 0; }
+  td { padding: 1.4px 3px; border-bottom: .4pt solid #dde3ec; vertical-align: top; }
+  td.l { font-weight: bold; color: #1F4E9C; white-space: nowrap; width: 38%; }
+  .frac { display: inline-block; text-align: center; vertical-align: -0.5em;
+          font-size: .84em; line-height: 1.02; margin: 0 1px; }
+  .frac span { display: block; padding: 0 2px; }
+  .frac .d { border-top: .6pt solid currentColor; }
+  footer { position: fixed; bottom: 0; left: 8mm; right: 8mm;
+           border-top: .6pt solid #c9d4e6; padding-top: 2px;
+           font-family: "Liberation Sans", Arial, sans-serif;
+           font-size: 5.8pt; color: #7a8390; display: flex; justify-content: space-between; }
+</style>
+
+<header>
+  <img src="logo.png" alt="">
+  <div>
+    <h1>Sec 3 A-Math &mdash; The Night Before</h1>
+    <div class="sub">Syllabus 4049 &middot; EOY Paper 1 &middot; Formulas not on the formula sheet, and the traps that actually cost marks</div>
+  </div>
+</header>
+
+<div class="cols">
+
+<section>
+  <h2>Read this first</h2>
+  <p>The formula sheet gives you the quadratic formula, the binomial expansion, the trig identities
+  and the sine/cosine rules. <b class="r">Everything below is NOT on it.</b> If you only have
+  twenty minutes, learn the red boxes &mdash; they are where real marks were lost in marked scripts,
+  not where the hard questions were.</p>
+</section>
+
+<section>
+  <h2>Discriminant &mdash; the whole of it</h2>
+  <div class="f"><span class="k">D = b&sup2; &minus; 4ac</span></div>
+  <table>
+    <tr><td class="l">D &gt; 0</td><td>2 distinct real roots; line cuts curve twice</td></tr>
+    <tr><td class="l">D = 0</td><td>equal roots; line is a <b>tangent</b></td></tr>
+    <tr><td class="l">D &lt; 0</td><td>no real roots; <b>no intersection</b></td></tr>
+  </table>
+  <p><b>"Always positive"</b> (curve above the <i>x</i>-axis for all <i>x</i>):
+  <span class="k">a &gt; 0 AND D &lt; 0</span>.<br>
+  <b>"Always negative":</b> <span class="k">a &lt; 0 AND D &lt; 0</span>.</p>
+  <p><b>Curve above a line?</b> Subtract first: (curve &minus; line) &gt; 0 for all <i>x</i>,
+  then apply the rule to <i>that</i> quadratic.</p>
+</section>
+
+<section>
+  <h2 class="warn">Trap &mdash; solving in k</h2>
+  <p>k(k &minus; 12) &lt; 0 gives <b class="g">0 &lt; k &lt; 12</b> (inside).<br>
+  k(k &minus; 12) &gt; 0 gives <b class="g">k &lt; 0 or k &gt; 12</b> (outside).</p>
+  <p><i>Sketch the parabola every single time. Below the axis = between the roots.
+  This one line of drawing has saved 4 marks more than once.</i></p>
+</section>
+
+<section>
+  <h2>Surds</h2>
+  <p>Conjugate of a + &radic;b is a &minus; &radic;b &mdash; <b>flip the sign of the surd only</b>.</p>
+  <p>Denominator 2&radic;3 &minus; 3 &rarr; multiply by 2&radic;3 + 3, giving 12 &minus; 9 = 3.</p>
+  <p><b class="r">Rational &ne; integer.</b> If it asks for <i>a</i> + <i>b</i>&radic;3 with
+  <i>a</i>, <i>b</i> rational, a fraction like 11/6 is the expected answer &mdash; do not round it.</p>
+  <p><b>Surd equations:</b> isolate one surd, square, isolate again if needed, square again.
+  <b class="r">Then test every root in the ORIGINAL equation.</b> Squaring invents roots.
+  Sometimes both are valid &mdash; do not reject one out of habit.</p>
+</section>
+
+<section>
+  <h2>Polynomials</h2>
+  <p><b>Factor theorem:</b> (<i>x</i> &minus; <i>a</i>) is a factor &hArr; <i>f</i>(<i>a</i>) = 0.<br>
+  For (2<i>x</i> &minus; 1), use <i>f</i>(&frac12;), not <i>f</i>(2).</p>
+  <p><b>Remainder theorem:</b> remainder on dividing by (<i>x</i> &minus; <i>a</i>) is <i>f</i>(<i>a</i>).</p>
+  <p>Two conditions &rarr; two simultaneous equations in the two unknowns.</p>
+  <p><b>"Only one real root":</b> factor out the linear part, then show the quadratic
+  factor has <b>D &lt; 0</b>. Say it in words to earn the mark.</p>
+</section>
+
+<section>
+  <h2>Partial fractions</h2>
+  <table>
+    <tr><td class="l">(ax + b)</td><td><span class="frac"><span>A</span><span class="d">ax+b</span></span></td></tr>
+    <tr><td class="l">(ax + b)&sup2;</td><td><span class="frac"><span>A</span><span class="d">ax+b</span></span> + <span class="frac"><span>B</span><span class="d">(ax+b)&sup2;</span></span></td></tr>
+    <tr><td class="l">(x&sup2; + c) irreducible</td><td><span class="frac"><span>Ax+B</span><span class="d">x&sup2;+c</span></span></td></tr>
+  </table>
+  <p><b class="r">Improper first.</b> If the numerator's degree &ge; the denominator's,
+  divide out a quotient BEFORE splitting. Degree 3 over degree 3 gives a constant quotient.</p>
+  <p><i>If the denominator is given unfactorised, factorise by grouping first:
+  x&sup3; &minus; x&sup2; + 4x &minus; 4 = x&sup2;(x&minus;1) + 4(x&minus;1).</i></p>
+</section>
+
+<section>
+  <h2 class="warn">Trap &mdash; logarithm laws</h2>
+  <div class="f"><b>log A + log B = log(AB)</b> &nbsp;&mdash; <b class="r">NOT log(A+B)</b></div>
+  <div class="f"><b>log A &minus; log B = log(A/B)</b> &nbsp;&mdash; <b class="r">NOT log(A&minus;B)</b></div>
+  <div class="f"><b>n log A = log A<sup>n</sup></b></div>
+  <p><b>Change of base:</b> log<sub>b</sub>x = <span class="frac"><span>log<sub>a</sub>x</span><span class="d">log<sub>a</sub>b</span></span>
+  &nbsp;&middot;&nbsp; log<sub>x</sub>a = <span class="frac"><span>1</span><span class="d">log<sub>a</sub>x</span></span></p>
+  <p>log<sub>9</sub>x = &frac12;&thinsp;log<sub>3</sub>x &nbsp;&middot;&nbsp;
+  log<sub>4</sub>x = &frac12;&thinsp;log<sub>2</sub>x</p>
+  <p><b class="r">Always check the domain.</b> Every argument must be &gt; 0, so reject roots that
+  make any bracket zero or negative. The base must be &gt; 0 and &ne; 1.</p>
+</section>
+
+<section>
+  <h2>Indices &amp; exponentials</h2>
+  <p><b>Hidden quadratic:</b> let <i>u</i> = a<sup>x</sup>.<br>
+  Watch the stray factor: 3<sup>2x+1</sup> = <b>3</b>(3<sup>x</sup>)&sup2;, not (3<sup>x</sup>)&sup2;.</p>
+  <p><b class="r">a<sup>x</sup> is always positive</b> &mdash; reject any negative value of <i>u</i>,
+  and say why.</p>
+  <p><b>Growth/decay M = M<sub>0</sub>e<sup>kt</sup>:</b> two readings &rarr;
+  <b>divide the equations</b> to kill M<sub>0</sub>, then substitute back for M<sub>0</sub>.
+  If neither reading is at <i>t</i> = 0, M<sub>0</sub> is NOT the first mass given.</p>
+  <p><b class="r">ln M<sub>0</sub> is not M<sub>0</sub>.</b> Undo the logarithm at the end.</p>
+</section>
+
+<section>
+  <h2>Binomial theorem</h2>
+  <div class="f">General term: <b>T<sub>r+1</sub> = <sup>n</sup>C<sub>r</sub> a<sup>n&minus;r</sup> b<sup>r</sup></b></div>
+  <p>In (2 + kx)<sup>6</sup>, the x&sup3; coefficient is
+  <sup>6</sup>C<sub>3</sub>&thinsp;2&sup3;&thinsp;k&sup3; &mdash; <b class="r">keep BOTH the power of 2
+  and the power of k</b>. Dropping the 2<sup>n&minus;r</sup> is the single commonest error.</p>
+  <p><b>Term independent of x</b> = the x<sup>0</sup> term: set the total power to zero and solve for <i>r</i>.</p>
+  <p><b>Bracket in front?</b> (2 &minus; x)(1 + 2x)<sup>8</sup>: the x&#8309; term takes
+  <b>two</b> contributions &mdash; 2&times;(x&#8309; term) and (&minus;x)&times;(x&#8308; term).</p>
+</section>
+
+<section>
+  <h2>Coordinate geometry</h2>
+  <table>
+    <tr><td class="l">Gradient</td><td>(y&#8322;&minus;y&#8321;)/(x&#8322;&minus;x&#8321;)</td></tr>
+    <tr><td class="l">Perpendicular</td><td>m&#8321;m&#8322; = &minus;1</td></tr>
+    <tr><td class="l">Midpoint</td><td>((x&#8321;+x&#8322;)/2, (y&#8321;+y&#8322;)/2)</td></tr>
+    <tr><td class="l">Distance</td><td>&radic;(&Delta;x&sup2; + &Delta;y&sup2;)</td></tr>
+    <tr><td class="l">Area (shoelace)</td><td>&frac12;|x&#8321;(y&#8322;&minus;y&#8323;) + x&#8322;(y&#8323;&minus;y&#8321;) + x&#8323;(y&#8321;&minus;y&#8322;)|</td></tr>
+  </table>
+  <p><b>Perpendicular bisector</b> = midpoint + negative reciprocal gradient. Every point on it
+  is <b>equidistant from both ends</b> &mdash; that one sentence proves a triangle isosceles.</p>
+  <p><i>"Solutions by accurate drawing will not be accepted" means show algebra. A measured
+  answer scores zero even if it is right.</i></p>
+</section>
+
+<section>
+  <h2>Linear law</h2>
+  <p>Rearrange into <b>Y = mX + c</b>, then say plainly what is plotted against what.</p>
+  <table>
+    <tr><td class="l">y = ax<sup>b</sup></td><td>lg y against lg x &mdash; <b>log both</b></td></tr>
+    <tr><td class="l">y = ab<sup>x</sup></td><td>lg y against x</td></tr>
+    <tr><td class="l">y = x/(ax+b)</td><td>1/y against 1/x, or x/y against x</td></tr>
+  </table>
+  <p><b class="r">Read gradient and intercept off the DRAWN LINE</b>, using two points far apart.
+  Never go back to the raw table.</p>
+  <p>If the intercept is lg&thinsp;a, you still need <b>a = 10<sup>intercept</sup></b>.</p>
+</section>
+
+<section>
+  <h2 class="warn">Trap &mdash; trig signs</h2>
+  <p><b>ASTC</b> from quadrant 1: <b>A</b>ll &middot; <b>S</b>in &middot; <b>T</b>an &middot; <b>C</b>os are positive.</p>
+  <p><b class="r">&radic;(1 &minus; p&sup2;) is NEVER 1 &minus; p.</b> Test it: p = 0.6 gives 0.8, not 0.4.
+  A root does not distribute over a subtraction.</p>
+  <table>
+    <tr><td class="l">sin(90&deg; &plusmn; A)</td><td>= cos A</td></tr>
+    <tr><td class="l">cos(90&deg; + A)</td><td>= &minus;sin A</td></tr>
+    <tr><td class="l">sin(180&deg; &minus; A)</td><td>= sin A</td></tr>
+    <tr><td class="l">cos(180&deg; &minus; A)</td><td>= &minus;cos A</td></tr>
+    <tr><td class="l">tan(180&deg; &minus; A)</td><td>= &minus;tan A</td></tr>
+    <tr><td class="l">Any (360&deg; &minus; A)</td><td>quadrant 4: only cos stays +</td></tr>
+  </table>
+  <p><b>sec, cosec, cot:</b> find sin / cos / tan first, then <b class="r">take the reciprocal LAST</b>.</p>
+</section>
+
+<section>
+  <h2>Trig graphs &amp; equations</h2>
+  <p>For <b>y = a &plusmn; b&thinsp;sin(nx)</b>: amplitude <b>b</b>, period <b>360&deg;/n</b>
+  (or 2&pi;/n), max <b>a + b</b>, min <b>a &minus; b</b>.</p>
+  <p><b class="r">A minus sign swaps where max and min happen</b> &mdash; y = 3 &minus; 4cos(x/2)
+  starts at its MINIMUM.</p>
+  <p>Before sketching, ask: <b>how many cycles fit the given range?</b>
+  Period 4&pi; over 0 to 4&pi; is exactly <b>one</b>.</p>
+  <p><b class="r">Solving: transform the RANGE too.</b> If 0 &le; x &le; 4&pi; and the angle is x/2,
+  then work in 0 &le; x/2 &le; 2&pi; and double at the very end.</p>
+  <p><b>Negative cosine &rarr; quadrants 2 and 3</b>, so 180&deg;&minus;&alpha; and 180&deg;+&alpha;.
+  Negative sine &rarr; quadrants 3 and 4. Getting this backwards costs both accuracy marks.</p>
+  <p><b>Proving an identity:</b> work on ONE side only. Cross-multiplying both sides assumes
+  the result and scores nothing.</p>
+</section>
+
+<section>
+  <h2 class="go">Marks you can bank tomorrow</h2>
+  <ul>
+    <li class="t"><b>Answer the form asked for.</b> "Exact" means surds, &pi; or ln &mdash; never a
+    decimal. "3 s.f.", "2 d.p.", "as a multiple of &pi;", "integers", "rational" &mdash; a right
+    number in the wrong form loses the accuracy mark.</li>
+    <li class="t"><b>Ceiling answers.</b> "Least number of complete hours/days" &mdash; 8.94 becomes
+    <b>9</b>, not 8. Say the quantity first passes the target during that unit.</li>
+    <li class="t"><b>"Explain why" is worth ~2 marks a paper.</b> Write a sentence, not just algebra.</li>
+    <li class="t"><b>"Hence"</b> means use the previous part. Starting again wastes time and
+    may score zero.</li>
+    <li class="t"><b>Never leave a part blank.</b> Write the general term, the formula, the
+    first substitution. Method marks are given for the attempt.</li>
+    <li class="t"><b>Keep unrounded values in the calculator</b> for the next part; round only the
+    final answer.</li>
+    <li class="t"><b>Re-read the last line against the question.</b> Most marks in marked scripts
+    were lost on the FINAL step of a correct solution &mdash; the wrong variable reported, the
+    wrong form, a copied-down slip.</li>
+  </ul>
+</section>
+
+<section>
+  <h2 class="go">Tonight &amp; tomorrow</h2>
+  <p><b>Tonight:</b> read the red boxes twice. Do not start a new topic &mdash; you will not learn
+  it in one evening and it will cost you sleep, which is worth more marks. Pack your calculator
+  (check the batteries), a ruler, a sharp pencil for graphs, and your ID.</p>
+  <p><b>In the exam:</b> ~1.5 minutes per mark. A 12-mark question deserves 18 minutes; a 4-mark
+  opener should take 6. If a part is stuck after two minutes, move on and come back &mdash;
+  later parts are often independent.</p>
+  <p><b>Last five minutes:</b> check every answer has the units, the form and the sign the
+  question asked for. That sweep is worth more than one more attempt at a hard part.</p>
+</section>
+
+</div>
+
+<footer>
+  <span>Cambridge Learning Group &middot; Sec 3 A-Math 4049 &middot; EOY revision one-pager</span>
+  <span>Formulas the formula sheet does not give you, plus the traps from real marked scripts</span>
+</footer>
